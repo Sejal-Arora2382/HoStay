@@ -469,36 +469,35 @@ input {
 
 /*--------------room--------*/
 /*--------------wrapper2--------*/
-.top2 {
+.wrapper2 {
   background-image: url("../image/w1.jpg");
 }
 
-.top2 .text {
+.wrapper2 .text {
   left: 10%;
 }
 
-.top2 h5,
-.top2 h2 {
+.wrapper2 h5,
+.wrapper2 h2 {
   color: white;
 }
 
-.top2 img {
+.wrapper2 img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 20px;
 }
 
-.top2 .para h5 {
+.wrapper2 .para h5 {
   font-size: 13px;
   font-weight: 300;
   margin-top: 5px;
 }
 
-.top2 .para {
+.wrapper2 .para {
   margin-left: 10%;
 }
-
 
 /*--------------wrapper2--------*/
 /*--------------restaurant--------*/
