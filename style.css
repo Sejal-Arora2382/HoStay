@@ -471,7 +471,6 @@ input {
 /*--------------wrapper2--------*/
 .wrapper2 {
   background-image: url("../image/w1.jpg");
-  height: 480px;
 }
 
 .wrapper2 .text {
@@ -500,6 +499,15 @@ input {
   margin-left: 10%;
 }
 
+.wrapper,
+.wrapper2 {
+  min-height: 480px;
+  display: block;
+}
+
+.wrapper .container {
+  height: 100%;
+}
 /*--------------wrapper2--------*/
 /*--------------restaurant--------*/
 .restaurant img {
