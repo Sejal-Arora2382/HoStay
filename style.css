@@ -471,6 +471,7 @@ input {
 /*--------------wrapper2--------*/
 .wrapper2 {
   background-image: url("../image/w1.jpg");
+  height: 480px;
 }
 
 .wrapper2 .text {
