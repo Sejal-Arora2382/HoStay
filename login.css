@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Roboto Slab', serif;
+}
+
+.clear{
+	clear: both;
+}
+
+.main{
+	width: 100%;
+	height: 100vh;
+	background-color: #0A0A0A;
+}
+
+.card{
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	align-items: center;
+}
+
+.card-title{
+	width: 100%;
+	align-items: center;
+}
+
+.card-title h3{
+	color: #73e4f8d3;
+	text-align: center;
+	padding: 20px 0;
+	font-weight: 500;
+}
+
+.card-title h3 > span{
+	color: #73e4f8d3;
+}
+
+.card-body{
+	background-color: #302723;
+	padding: 10px 0px;
+	border-radius: 5px;
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+}
+
+.card-body-top{
+	width: 100%;
+	position: center;
+	border-bottom: 1px solid #262626;
+}
+
+.card-body-top > .btn{
+	border: 0;
+	background-color: transparent;
+	color: #848484;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	width: 180px;
+	padding: 20px 0;
+}
+
+#login{
+	color: #91621bd3;
+}
+
+
+/*.active_btn{
+	color: #00ffc3!important;
+}*/
+
+/* #pointer-btn{
+	bottom:-1px;
+	left: 30px;
+	width: 120px;
+	height: 2px;
+	background-color: #91621bd3;
+	transition: 0.5s all ease;
+} */
+
+
+
+.card-body-login{
+	width: 100%;
+	padding: 15px 20px;
+	position: relative;
+}
+
+.card-body-login > #login-form{
+	position: absolute;
+	top: 30px;
+	left: 25px;
+	text-align: center;
+	transition: 0.5s all ease;
+}
+
+
+.input-form{
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	border-bottom: 1px solid #91621bd3;
+	width: 350px;
+	padding: 15px 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+}
+
+.submit-form{
+	background-color: #91621bd3;
+	color: rgb(250, 233, 233);
+	border: none;
+	padding: 10px 25px;
+	font-size: 15px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	border-radius: 50px;
+}
+
+.registeration h3{
+    color: #91621bd3;
+	letter-spacing: 1px;
+	border-radius: 50px;
+}
+

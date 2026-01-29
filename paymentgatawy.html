@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="paymentgatawy.css">
+</head>
+
+<body>
+    <div class="model">
+      <div class="room">
+        <div class="text-cover">
+          <h1>HOSTAY</h1>
+          <p class="price"> Home Away from Home </p>
+              <hr>
+          <p>Book a Hostel, Flat or PG for you today!</p>
+          <p></p>
+        </div>
+      </div><div class="payment">
+        <!-- <div class="receipt-box">
+          <h3>Reciept Summary</h3>
+          <table class="table">
+            <tr>
+              <td>120 x 2 nights</td>
+              <td>240.00 USD</td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td>0 USD</td>
+            </tr>
+            <tr>
+              <td>Subtotal</td>
+              <td>240 USD</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>10 USD</td>
+            </tr>
+            <tfoot>
+              <tr>
+                <td>Sum</td>
+                <td>$180</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div> -->
+        <div class="payment-info" method = "post">
+          <h3>Payment Information</h3>
+          <form action = "payment.php" method = "post">
+            <label style=" color: darkblue;"><b>Date:</b></label>
+          <input type="text" name="date" placeholder="Enter Date">
+           <label style="color: darkblue;"><b>Amount:</b></label>
+           <input type="text" name="amount" placeholder="Enter Amount">
+           <label style="margin-bottom: 0.5rem; color: darkblue;"><b>Payment Method:</b></label>
+           <label style="margin-bottom: 0.5rem;"><input type="radio" name="Payment" value="Bank Transfer" onclick="event1()">  Bank Transfer</label>
+           <label style="margin-bottom: 0.5rem;"><input type="radio" name="Payment" value="UPI" onclick="event2()" >  UPI</label>
+           <label style="margin-bottom: 0.5rem;"><input type="radio" name="Payment" value="Cards: Debit/Credit" onclick="event3()">  Cards: Debit/Credit</label>
+           <b><label id="label1"></label></b> 
+           <!-- <label style=" color: darkblue;">Name of Bank:</label><input type="text"name="bank_name"placeholder="Enter your Bank Name"><label style=" color: darkblue;">Account Number:</label><input type="text" name="acc_no" placeholder="Enter your Account Number"><label style=" color: darkblue;">IFSC Code:</label><input type="text" name="ifsc" placeholder="Enter your IFSC Code"> -->
+          <!-- <label>UPI:</label>
+          <input type="text" name="UPI" placeholder="Enter UPI id"> -->
+         
+          <input class="btn" type="submit" value="Book Securly" style="background-color : #C1B086">
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    function event1(){
+      document.getElementById("label1").innerHTML = "<label style=\" color: darkblue;\">Name of Bank:</label><input type=\"text\"name=\"bank_name\"placeholder=\"Enter your Bank Name\"><label style=\" color: darkblue;\">Account Number:</label><input type=\"text\" name=\"acc_no\" placeholder=\"Enter your Account Number\"><label style=\" color: darkblue;\">IFSC Code:</label><input type=\"text\" name=\"ifsc\" placeholder=\"Enter your IFSC Code\">"
+    }
+
+    function event2(){
+      document.getElementById("label1").innerHTML = "<label style=\" color: darkblue;\">UPI ID:</label><input type=\"text\" name=\"upi\"placeholder=\"Enter your UPI ID\">"
+    }
+
+    function event3(){
+      document.getElementById("label1").innerHTML = "<label style=\" color: darkblue;\">Card Number:</label><input type=\"text\"name=\"card_no\"placeholder=\"Enter your Card Number\"><label style=\" color: darkblue;\">CVV:</label><input type=\"text\" name=\"cvv\" placeholder=\"Enter your CVV\">"
+    }
+  </script>
+
+
+  

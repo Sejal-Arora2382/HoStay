@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hostel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/hostayy.png"> </a>
+
+        <div class="nav-menu">
+          <ul>
+            <li> <a href="#home" class="nav-link">Home</a> </li>
+            <li> <a href="#about" class="nav-link">About</a> </li>
+            <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+            <li> <a href="paymentgatawy.html" class="nav-link">Payment</a> </li>
+            <li> <a href="#contact" class="nav-link">Contact</a> </li>
+            <li> <a href="form.html" class="na-link">JoinUs</a> </li>
+            <li> <a href="login.html"><button>LOGIN</button></a></li>
+          </ul>
+        </div>
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Home Away From Home.</h1>
+          <p>A place where you can look for accomodation of your choice, get a place with facilities and services you
+            require and book it instantly from any place in the world. You can even add on extra services like food,
+            laundry, wifi to your package.</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Start Date:</label>
+          <input type="date" placeholder="Date ">
+        </div>
+        <div class="box">
+          <label> Type:</label> <br>
+          <select name="type" id="type" placeholder="Hostel /PG /Rented Flat"
+            style="height: 50px; width: 300px; background-color: #644127; color:  rgb(224, 196, 162); margin-top: 20px;">
+            <option value="Bangalore">Hostel /PG /Rented Flat</option>
+            <option value="Bangalore">PG</option>
+            <option value="Bangalore">HOSTEL</option>
+            <option value="Bangalore">RENTED FLAT</option>
+          </select>
+          <!-- <input type="search" placeholder="Hostel /PG /Rented Flat"> -->
+        </div>
+        <div class="box">
+          <label>City:</label> <br>
+          <div style="padding-top: 20px;">
+            <select name="type" id="type" value="Enter City"
+              style="height: 50px; width: 300px; background-color: #644127; color:  rgb(224, 196, 162);">
+
+              <option value="Bangalore">Enter City</option>
+
+              <option value="Bangalore">Bangalore</option>
+              <option value="Bangalore">Dehradun</option>
+              <option value="Bangalore">Gurgaon</option>
+            </select>
+            <!-- <input type="search" placeholder="Enter City"> -->
+
+          </div>
+        </div>
+        <div class="box">
+          <label>Area:</label> <br>
+          <input type="search" placeholder="Enter Area">
+        </div>
+
+      </div>
+      <div class="search">
+        <a href="search.html"><input type="submit" value="SEARCH"></a>
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>HOME AWAY FROM HOME</h5>
+          <h2>Welcome to Hostay</h2>
+          <p> As we know there are multiple hostels available everywhere however, there is no such medium to find them
+            from a distant place or to search them online. We eliminate this issue and help all the students find the
+            best hostel according to their comforts and needs. It not just provides the list of all the hostels
+            available but also helps students and parents shortlist all the hostels according to their wish list.</p>
+          <p> The idea of Hostay is quite similar to how the websites or apps for booking the best suitable hotel or
+            holiday destination work, but the idea behind Hostay is to find the best suitable Hostel, PG, or Flat and
+            not a hotel. In other words, Hostay could be considered as a website for searching for a hostel in any city
+            near any college, office, or place in India.</p>
+          <a href = "Aboutus.html"><button class="btn1">READ MORE</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="Services.html">
+    <section class="wrapper top">
+      <div class="container">
+        <div class="text">
+          <h2>Our Facilities</h2>
+          <p>These are some common facilities that every Hostel will provide. Some of these facilities are as follows:
+          </p>
+          <div class="content">
+            <div class="box flex">
+              <i class="fas fa-bed"></i>
+              <span>Bed with Mattresses</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-box"></i>
+              <span>Spacious Cupboards</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-chair"></i>
+              <span>Study Desk</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-table"></i>
+              <span>Windows for ventilation</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-hamburger"></i>
+              <span>Dining Area</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-water"></i>
+              <span>Washing Area</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-tv"></i>
+              <span>Common Appliance Area</span>
+            </div>
+            <div class="box flex">
+              <i class="fas fa-wifi"></i>
+              <span>Wifi Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </a>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>HOME AWAY FROM HOME</h5>
+          <h2>Categories</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">SEE MORE</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="hostel1">
+            <div class="img">
+              <div class="card">
+                <img src="image/r1.jpg">
+                <!-- <h3>CHECK OUT HOSTELS</h3> -->
+              </div>
+            </div>
+            <h3>HOSTELS</h3>
+            <p> <span>Rs.</span>13,000 <span>/per month (approx.)</span> </p>
+          </div>
+        </div>
+      
+      <div class="box">
+        <div class="img">
+          <img src="image/r2.jpg" alt="">
+        </div>
+        <div class="text">
+          <h3>PGs</h3>
+          <p> <span>Rs.</span>10,000 <span>/per month (approx.)</span> </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="img">
+          <img src="image/r3.jpg" alt="">
+        </div>
+        <div class="text">
+          <h3>Rented Flats</h3>
+          <p> <span>Rs.</span>8,000 <span>/per month (approx.)</span> </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p> I am very happy that finally there is a website that helps us find hostel online, it helped me find a
+            Hostel of my choice, with my choice of services and that too at a very reasonable price. I highly recoomend
+            you all to try this website. </p>
+          <div class="box flex">
+            <div class="img">
+              <img src="image/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>Nancy Joseph</h5>
+              <h5>Banglore</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+
+      <div class="right">
+        <div class="text">
+
+          <h2>Our Food Service</h2>
+          <p> "Home away from Home" not just means an accomodation like Home but also a place where you get food like
+            home. We have a variety of restaurant choices from where occupants can book a food service for their desired
+            cuisine at a desired time they want. Some of those restaurants are:
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Chinese Restaurant</h2>
+            <div class="accordionItemContent">
+              <p> Menu Includes : Noodles dishes, Fried Rice dishes, Seafood Dishes, Pork Dishes, Beef Dishes, Rolls,
+                Poultry dishes, Dumplings and much more. </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">North Indian Restaurant</h2>
+            <div class="accordionItemContent">
+              <p>Menu Includes : Chhole Bhature, Dal- Bati Chruma, Chaat, Breads, Thali combos, Biryani, Paranthas, Poha
+                and much more. </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">South Indian Restaurant</h2>
+            <div class="accordionItemContent">
+              <p>Menu Includes : Dosa, Idli, Sambhar, Rassam, Upma, Uttapam, Vada, Kulambu, Curd Rice, Appam, Puttu,
+                Bonda and much more.</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Italian Restaurant</h2>
+            <div class="accordionItemContent">
+              <p>Menu Includes : Bolognese, Pizza, Pasta, Spaghetti, Lasagna, Gnocchi, Ravioli, Ricci De Mare,
+                Bruschette and much more. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <a href= " foodservices/index.html"><button class="btn1">VIEW MORE</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+<section class="gallary mtop " id="gallary">
+  <div class="container">
+    <div class="heading_top flex1">
+      <div class="heading">
+        <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+        <h2>Photo Gallery of Our Hostels</h2>
+      </div>
+      <div class="button">
+        <button class="btn1">VIEW GALLERY</button>
+      </div>
+    </div>
+
+    <div class="owl-carousel owl-theme">
+      <div class="image_item">
+        <img src="image/g1.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g2.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g3.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g4.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g5.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g6.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g7.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="image/g8.jpg" alt="">
+      </div>
+    </div>
+
+
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img
+          src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> </p>
+       <a href = "Paymentgatawy.html">
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div></a>
+      </div>
+
+      <div class="box">
+        <!-- <h3>Recent News</h3> -->
+
+        <ul>
+          <!--<li>Our Secret Island Boat Tour Is Just for You</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in Luviana Hotel</li>
+          <li>Live Music Concerts at Luviana</li>
+        </ul>-->
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <a href = "Aboutus.html"><li>About Hostay</li></a>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box" id="contact">
+        <h3>Contact Us</h3>
+
+        <ul>
+         <a href = "index.html" ><li>www.hostay.in </li> </a>
+          <li><i class="far fa-envelope"></i><a href="mailto:sejalaroraa230802@gmail.com" > hostayhelp@gmail.com </a></li>
+          <li><i class="far fa-phone-alt"></i> 9876543210 </li>
+          <li><i class="far fa-phone-alt"></i>8979695940 </li>
+          <li><i class="far fa-comments"></i> 24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
