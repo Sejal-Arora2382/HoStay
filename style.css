@@ -469,45 +469,37 @@ input {
 
 /*--------------room--------*/
 /*--------------wrapper2--------*/
-.wrapper2 {
+.top2 {
   background-image: url("../image/w1.jpg");
 }
 
-.wrapper2 .text {
+.top2 .text {
   left: 10%;
 }
 
-.wrapper2 h5,
-.wrapper2 h2 {
+.top2 h5,
+.top2 h2 {
   color: white;
 }
 
-.wrapper2 img {
+.top2 img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 20px;
 }
 
-.wrapper2 .para h5 {
+.top2 .para h5 {
   font-size: 13px;
   font-weight: 300;
   margin-top: 5px;
 }
 
-.wrapper2 .para {
+.top2 .para {
   margin-left: 10%;
 }
 
-.wrapper,
-.wrapper2 {
-  min-height: 480px;
-  display: block;
-}
 
-.wrapper .container {
-  height: 100%;
-}
 /*--------------wrapper2--------*/
 /*--------------restaurant--------*/
 .restaurant img {
