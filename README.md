@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # HoStay 🏡
 
 HoStay is a web-based project designed to showcase [brief description of your project].
@@ -26,5 +25,4 @@ HoStay is a web-based project designed to showcase [brief description of your pr
 ---
 © 2026 HoStay. All rights reserved.
 =======
-https://sejal-arora2382.github.io/HoStay/
->>>>>>> efa085645c420ff2d9de3d731c263b559fd393f5
+https://sejal-arora2382.github.io/HoStay/efa085645c420ff2d9de3d731c263b559fd393f5
